@@ -16,6 +16,7 @@ import lombok.Setter;
 public class Admin {
 
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long idAdmin ;
@@ -23,3 +24,4 @@ public class Admin {
     String prenomAdmin;
     String mail;
 }
+
