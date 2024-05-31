@@ -16,10 +16,12 @@ import lombok.Setter;
 public class Admin {
 
 
-        @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
-        Long idAdmin ;
-        String nomAdmin;
-        String prenomAdmin;
-        String mail;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    Long idAdmin ;
+    String nomAdmin;
+    String prenomAdmin;
+    String mail;
 }
+
