@@ -6,24 +6,21 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.LocalDate;
+import java.util.Set;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Etudiant {
+public class Classe {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long idEtudiant;
-    @Column(length = 8,name = "identifiant")
-    String cin;
+    long idClasse;
     String nom;
-    String prenom;
-    String email;
-    String motDePasse;
-    LocalDate dateBirth;
-    @Enumerated(EnumType.STRING)
-    Role RoleClub;
+    long niveau;
+    String specialite;
+    @ManyToMany
+    private Set <User> users;
+
 }
